@@ -1,0 +1,82 @@
+page-login {
+  #logo-label {
+    font-size: 3em;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    text-shadow: 5px -3px 6px gray;
+    font-family: "Yellowtail";
+  }
+
+  .background-image {
+    background-image: url("../../assets/imgs/gedung-unis.jpg");
+    background-size: cover;
+    display: block;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 600px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    right: 0;
+    z-index: -1;
+  }
+
+  .login-content {
+
+    .principal-select {
+      background-color: white;
+      border-radius: 5px;
+      max-width: 100%;
+      border: 5px;
+      padding: 13px 18px 13px 16px;
+      margin-bottom: 10px;
+    }
+
+    .logo-row {
+      padding-top: 5px;
+    }
+
+    .login-box {
+      background: rgba(color($colors,yellow),0.7);
+      padding: 1px 1px 0px 1px;
+      margin: 0px 10px 0px 10px;
+      border-radius: 10px !important;
+    }
+
+    ion-row {
+       align-items: center;
+       text-align: center;
+     }
+
+     ion-item {
+         border-radius: 10px !important;
+         padding-left: 10px !important;
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border: 1px solid #ffffff;
+         border-bottom: 0px !important;
+         box-shadow: none !important;
+     }
+
+     .signup-col {
+       margin: 0px 16px 0px 16px;
+       padding-bottom: 20px;
+     }
+
+     .item-inner {
+       border-bottom-color: #ffffff !important;
+       box-shadow: none !important;
+     }
+
+    //  .submit-btn {
+    //    background: #51CFB1;
+    //    border-radius: 30px !important;
+    //    border: 1px solid #ffffff;
+    //  }
+
+     .register-btn {
+       color: #ffffff;
+       font-size: 0.8em;
+     }
+  }
+}

@@ -1,0 +1,26 @@
+page-profile {
+  .content {
+    background-color: #f4f4f7;
+    ion-list p {
+      white-space: normal;
+    }
+  }
+
+  .profile-card {
+    .profile-card-header {
+      font-size: 1.5em;
+    }
+    .profilebutton {
+      z-index: 3;
+      position: absolute;
+      left: 75%;
+      top: 5%;
+      margin: auto;
+      border-radius: 10%;
+    }
+    .profilepic-border {
+      position: relative;
+      background: #a3a3a3;
+    }
+  }
+}

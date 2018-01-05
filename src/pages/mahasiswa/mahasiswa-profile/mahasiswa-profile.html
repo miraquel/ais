@@ -1,0 +1,101 @@
+<!--
+Generated template for the MahasiswaProfilePage page.
+
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <i class="fa fa-user" item-start aria-hidden="true"></i>
+      Profile
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="updateUser()">
+        <i class="fa fa-pencil-square fa-fw fa-2x" item-start aria-hidden="true"></i>
+        Edit
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content" padding>
+
+  <ion-card *ngIf="showError">
+
+    <ion-card-content>
+      <i class="fa fa-exclamation-triangle fa-2x" item-start aria-hidden="true"></i>
+      Koneksi Error
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card *ngIf="user" class="profile-card">
+
+    <div class="profilepic-border">
+      <img [src]="user?.profile_image_url"/>
+      <button ion-button class="profilebutton" (click)="changeProfilePicture()">
+        <i class="fa fa-camera-retro fa-fw fa-2x" item-start aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <ion-card-content>
+      <ion-item class="profile-card-header">
+        Profil Mahasiswa
+      </ion-item>
+
+      <ion-list>
+
+        <button ion-item>
+          <i class="fa fa-user faGreen fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>Nama</h2>
+          <p>{{ user?.nama }}</p>
+        </button>
+
+        <button ion-item>
+          <i class="fa fa-id-card faYellow fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>NIM</h2>
+          <p>{{ user?.nim }}</p>
+        </button>
+
+        <button ion-item>
+          <i class="fa fa-birthday-cake faOrange fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>Tempat, Tanggal Lahir</h2>
+          <p>{{ user?.tempat_lahir }}, {{ user?.tanggal_lahir | date: 'dd MMMM yyyy' }}</p>
+        </button>
+
+        <button ion-item>
+          <i class="fa fa-map-marker faLightBlue fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>Alamat</h2>
+          <p>{{ user?.alamat }}</p>
+        </button>
+
+        <button ion-item>
+          <i *ngIf="user?.jenis_kelamin === 'Laki-Laki'" class="fa fa-mars faOrange fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <i *ngIf="user?.jenis_kelamin === 'Perempuan'" class="fa fa-venus faOrange fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>Jenis Kelamin</h2>
+          <p>{{ user?.jenis_kelamin }}</p>
+        </button>
+
+        <button ion-item>
+          <i class="fa fa-envelope faYellow fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>Email</h2>
+          <p>{{ user?.email }}</p>
+        </button>
+
+        <button ion-item>
+          <i class="fa fa-at faGreen fa-fw fa-2x" item-start aria-hidden="true"></i>
+          <h2>Username</h2>
+          <p>{{ user?.username }}</p>
+        </button>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
